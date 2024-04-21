@@ -1,0 +1,23 @@
+.characters{
+ /* 設置背景圖片 */
+ background-image: url('../../../assets/images/characters1.jpg');
+
+ /* 確保背景圖覆蓋整個可視範圍 */
+//  background-size: cover;
+
+ /* 背景圖固定，滾動時不移動 */
+ background-attachment: fixed;
+
+ /* 背景圖始終置中 */
+ background-position: center center;
+
+ /* 確保背景圖不會重複 */
+ background-repeat: no-repeat;
+
+ /* 給網頁內容設置一定的最小高度，確保即使內容不足也能覆蓋全屏 */
+ min-height: 100vh;
+
+ /* 其他風格設定 */
+ margin: 0;
+ padding: 0;
+}

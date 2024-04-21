@@ -9,8 +9,8 @@ import { BreadcrumbComponent } from '../../main/breadcrumb/breadcrumb.component'
 @Component({
   selector: 'layout-card',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,FooterComponent,HeaderComponent,BreadcrumbComponent],
+  imports: [CommonModule, RouterOutlet, FooterComponent, HeaderComponent, BreadcrumbComponent],
   templateUrl: './layout-card.component.html',
-  styles: [],
+  styleUrl: './layout-card.component.scss',
 })
-export class LayoutCardComponent {}
+export class LayoutCardComponent { }

@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+// Global reset styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// Style modifications for specific tags
+em, i {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+
+  &:hover {
+    color: #c81623;
+  }
+}
+
+// Common font styles for button and input
+button, input {
+  font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, '\5B8B\4F53', sans-serif;
+}
+
+// Base body styles
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #FFFFFF;
+  font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, '\5B8B\4F53', sans-serif;
+  color: #000;
+  font-family: 'Inter';
+}
+
+// Utility classes
+.hide, .none {
+  display: none;
+}
+
+// Clearfix hack
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    content: ".";
+    clear: both;
+    height: 0;
+  }
+}

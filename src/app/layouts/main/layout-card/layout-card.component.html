@@ -1,12 +1,12 @@
-<div class="flex flex-col h-screen justify-between">
+<div class="container">
   <!-- header -->
   <app-header></app-header>
-  <main class="flex-1 mt-20 sm:mt-24 md:mt-28 px-5">
+  <main>
     <!-- 面包屑 -->
     <app-breadcrumb></app-breadcrumb>
     <!-- 主要内容 -->
-    <div class="justify-center flex my-10">
-      <div class="max-w-[1440px] w-full">
+    <div class="content">
+      <div class="max-width-container">
         <router-outlet></router-outlet>
       </div>
     </div>
