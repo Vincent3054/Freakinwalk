@@ -1,23 +1,46 @@
-.characters-bgc{
- /* 設置背景圖片 */
- background-image: url('../../../assets/images/characters1.png');
+.characters-bgc {
+  position: relative;
+  width: 100%; // 確保 div 佔滿其父容器的寬度
+  overflow: hidden; // 防止圖片超出 div 範圍
 
- /* 確保背景圖覆蓋整個可視範圍 */
-//  background-size: cover;
+  img {
+    object-fit: cover; // 保持圖片覆蓋整個容器，可能會裁剪邊緣
+    object-position: top center; // 置中並靠上對齊
+    display: block; // 移除圖片下方的空隙
+  }
+}
+// 媒體查詢針對電腦的設定
+@media (max-width: 1440px) { // 處理平板和較大手機
+  .characters-bgc {
+    height: 100%; // 或根據需要設置高度
 
- /* 背景圖固定，滾動時不移動 */
-//  background-attachment: fixed;
+    img {
+      object-fit: contain; // 改為 contain 以避免裁剪重要內容
+    }
+  }
+}
 
- /* 背景圖始終置中 */
- background-position: center center;
+// 媒體查詢針對手機和平板的設定
+@media (max-width: 1080px) { // 處理平板和較大手機
+  .characters-bgc {
+    height: 95vh; // 減少高度以避免過度拉伸
 
- /* 確保背景圖不會重複 */
- background-repeat: no-repeat;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; // 改為 contain 以避免裁剪重要內容
+    }
+  }
+}
 
- /* 給網頁內容設置一定的最小高度，確保即使內容不足也能覆蓋全屏 */
- min-height: 100vh;
+@media (max-width: 480px) { // 專門針對小屏手機
+  .characters-bgc {
+    height: 80vh; // 進一步調整高度以更適合小屏幕
 
- /* 其他風格設定 */
- margin: 0;
- padding: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: scale-down; // 適用於保持圖片原始尺寸的情況
+    }
+  }
 }
