@@ -1,0 +1,18 @@
+.footer-bgc{
+  /* 設置背景圖片 */
+  background-image: url('../../../assets/images/footer.png');
+
+  /* 背景圖始終置中 */
+  background-position: center center;
+
+  /* 確保背景圖不會重複 */
+  background-repeat: no-repeat;
+
+  /* 其他風格設定 */
+  margin: 0;
+  padding: 0;
+
+  /* 圖片長寬 */
+  width: 1080px;
+  height: 59px;
+ }

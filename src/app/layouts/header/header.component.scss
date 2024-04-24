@@ -1,0 +1,28 @@
+.header-bgc{
+  /* 設置背景圖片 */
+  background-image: url('../../../assets/images/header.png');
+
+  /* 背景圖始終置中 */
+  background-position: center center;
+
+  /* 確保背景圖不會重複 */
+  background-repeat: no-repeat;
+
+  /* 其他風格設定 */
+  margin: 24px 0 0 0;
+  padding: 0;
+
+  /* 圖片長寬 */
+  width: 1080px;
+  height: 74px;
+ }
+
+ .home{
+  /* 圖片長寬 */
+  width: 40px;
+  height: 40px;
+
+  /* 其他風格設定 */
+  margin-top: 5px;
+  margin-left: 24px;
+ }

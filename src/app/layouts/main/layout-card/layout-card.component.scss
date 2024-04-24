@@ -7,28 +7,28 @@
   margin: 0 auto; // Auto margins for horizontal centering
   max-width: 1080px;
   width: 100%;
-  background-color: gray;
+  background-image: url('../../../../assets/images/background.png');
   padding: 0;
 
   // Styling for <main>
-  main {
-    flex: 1; // equivalent to flex-1
-    padding: 1.25rem; // equivalent to px-5
-    margin-top: 5rem; // default margin-top 20, equivalent to mt-20
+  // main {
+  //   flex: 1; // equivalent to flex-1
+  //   padding: 1.25rem; // equivalent to px-5
+  //   margin-top: 5rem; // default margin-top 20, equivalent to mt-20
 
-    @media (min-width: 640px) { // sm breakpoint
-      margin-top: 6rem; // equivalent to sm:mt-24
-    }
+  //   @media (min-width: 640px) { // sm breakpoint
+  //     margin-top: 6rem; // equivalent to sm:mt-24
+  //   }
 
-    @media (min-width: 768px) { // md breakpoint
-      margin-top: 7rem; // equivalent to md:mt-28
-    }
+  //   @media (min-width: 768px) { // md breakpoint
+  //     margin-top: 7rem; // equivalent to md:mt-28
+  //   }
 
-    // Centering main content
-    .content {
-      display: flex;
-      justify-content: center;
-      margin: 2.5rem 0; // equivalent to my-10
-    }
-  }
+  //   // Centering main content
+  //   .content {
+  //     display: flex;
+  //     justify-content: center;
+  //     margin: 2.5rem 0; // equivalent to my-10
+  //   }
+  // }
 }
