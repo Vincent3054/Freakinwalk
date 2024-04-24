@@ -1,24 +1,36 @@
-.characters-bgc {
-  position: relative;
-  width: 100%; // 確保 div 佔滿其父容器的寬度
+.characters {
+  // position: relative;
+  // width: 100%; // 確保 div 佔滿其父容器的寬度
   overflow: hidden; // 防止圖片超出 div 範圍
 
-  img {
-    object-fit: cover; // 保持圖片覆蓋整個容器，可能會裁剪邊緣
-    object-position: top center; // 置中並靠上對齊
-    display: block; // 移除圖片下方的空隙
-  }
-}
-// 媒體查詢針對電腦的設定
-@media (max-width: 1440px) { // 處理平板和較大手機
-  .characters-bgc {
-    height: 100%; // 或根據需要設置高度
+  // img {
+  //   object-fit: cover; // 保持圖片覆蓋整個容器，可能會裁剪邊緣
 
-    img {
-      object-fit: contain; // 改為 contain 以避免裁剪重要內容
-    }
+  // }
+}
+.characters-img{
+  object-position: top center; // 置中並靠上對齊
+  display: block; // 移除圖片下方的空隙
+}
+
+
+.characters-bgc {
+  height: 100%; // 或根據需要設置高度
+
+  img {
+    object-fit: contain; // 改為 contain 以避免裁剪重要內容
   }
 }
+// // 媒體查詢針對電腦的設定
+// @media (max-width: 1440px) { // 處理平板和較大手機
+//   .characters-bgc {
+//     height: 100%; // 或根據需要設置高度
+
+//     img {
+//       object-fit: contain; // 改為 contain 以避免裁剪重要內容
+//     }
+//   }
+// }
 
 // 媒體查詢針對手機和平板的設定
 @media (max-width: 1080px) { // 處理平板和較大手機
