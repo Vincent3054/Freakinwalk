@@ -1,12 +1,12 @@
-.characters{
+.characters-bgc{
  /* 設置背景圖片 */
- background-image: url('../../../assets/images/characters1.jpg');
+ background-image: url('../../../assets/images/characters1.png');
 
  /* 確保背景圖覆蓋整個可視範圍 */
 //  background-size: cover;
 
  /* 背景圖固定，滾動時不移動 */
- background-attachment: fixed;
+//  background-attachment: fixed;
 
  /* 背景圖始終置中 */
  background-position: center center;
