@@ -10,6 +10,14 @@
   background-image: url('../../../../assets/images/background.png');
   padding: 0;
 
+  app-header{
+    width: 100%;
+    padding: 0;
+  }
+  app-footer{
+    width: 100%;
+    padding: 0;
+  }
   // Styling for <main>
   // main {
   //   flex: 1; // equivalent to flex-1
