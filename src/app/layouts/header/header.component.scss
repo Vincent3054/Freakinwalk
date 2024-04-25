@@ -1,28 +1,189 @@
-.header-bgc{
-  /* 設置背景圖片 */
-  background-image: url('../../../assets/images/header.png');
+.header-bgc {
+  display: flex;
+  // justify-content: center;
+  justify-content: space-between; /* 調整爲 space-between 以將子元素推到兩邊和中間 */
+  align-items: center;
+  width: 100%; /* 使用百分比而非固定像素值 */
+  height: 60px;
+  padding: 30px 10px; /* 適當的內間距 */
+  box-sizing: border-box; /* 防止 padding 影響最終寬度 */
+  border-bottom: 1pt solid #00ff31; /* 添加底部邊框 */
+}
 
-  /* 背景圖始終置中 */
-  background-position: center center;
+.header-text {
+  flex: 0 1 auto; /* 能夠縮放且基於內容寬度，但不會填滿整個容器 */
+  width: 263px;
+}
 
-  /* 確保背景圖不會重複 */
-  background-repeat: no-repeat;
+.header-icon {
+  width: 40px; /* 根据需要调整 */
+  height: auto; /* 保持图片比例 */
+  .left{
+    margin-left: 5px; /* 靠左對齊並留出一些間距 */
+  }
+  .righ{
+    margin-right: 5px; /* 靠右對齊並留出一些間距 */
+  }
+}
 
-  /* 其他風格設定 */
-  margin: 24px 0 0 0;
-  padding: 0;
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .header-text {
+    width: 197px;
+  }
+  .header-icon {
+    width: 30px; /* 在小屏幕上减小星星图片大小 */
+  }
+  .header-bgc {
+    height: 40px;
+  }
+}
 
-  /* 圖片長寬 */
-  width: 1080px;
-  height: 74px;
- }
+@media (max-width: 480px) {
+  .header-text {
+    width: 131px; /* 在更小屏幕上进一步减小星星图片大小 */
+  }
+  .header-icon {
+    width: 20px; /* 在小屏幕上减小星星图片大小 */
+  }
+  .header-bgc {
+    height: 35px;
+  }
+}
 
- .home{
-  /* 圖片長寬 */
+
+// menu style
+
+$menu-color: #00ff31;
+$menu-color-close: #00ff31;
+$fatness: 3px;
+@mixin transition{
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+//第一個按鈕
+.menu-icon{
   width: 40px;
   height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 5px;
+  z-index: 1;
 
-  /* 其他風格設定 */
-  margin-top: 5px;
-  margin-left: 24px;
- }
+  &_hamburger{
+    width: 100%;
+    height: $fatness;
+    background: $menu-color;
+    position: relative;
+    border-radius: 5px;
+    @include transition;
+
+    &:before, &:after{
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: $fatness;
+      background:$menu-color;
+      border-radius: 5px;
+      transform: translateY(-15px);
+      @include transition;
+
+    }
+    &:before{
+      transform: translateY(-15px);
+    }
+    &:after{
+      transform: translateY(15px);
+    }
+  }
+
+  .menu-icon_hamburger {
+    transition: transform 0.3s ease;
+  }
+
+  .menu-icon_hamburger:before,
+  .menu-icon_hamburger:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: $menu-color;
+    transition: transform 0.3s ease;
+  }
+
+  .menu-icon_hamburger.open {
+    transform: translateX(-30px);
+    background: transparent;
+  }
+
+  .menu-icon_hamburger.open:before {
+    transform: translate(30px) rotate(135deg);
+  }
+
+  .menu-icon_hamburger.open:after {
+    transform: translate(30px) rotate(-135deg);
+  }
+}
+
+// menu-list style
+.header-bgc {
+  position: relative; // 確保下拉選單相對於頭部導航定位
+}
+
+.dropdown-menu {
+  display: none; // 預設不顯示下拉選單
+  position: absolute; // 絕對定位
+  top: 100%; // 將下拉選單放置在觸發元素的下方
+  right: 0; // 與父元素的右邊緣對齊
+  background-color: #000; // 下拉選單的背景顏色
+  min-width: 250px; // 下拉選單的最小寬度
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); // 可選擇：增加陰影產生深度感
+  z-index: 1; // 確保它在其他項目之上
+  border: 1pt solid #00ff31; /* 添加底部邊框 */
+  padding: 10px 0px;
+  a {
+    color: $menu-color; // Text color for the dropdown items
+    text-decoration: none; // No underline for links
+    display: block; // Dropdown items take full width of the menu
+    font-weight: bold;
+
+    // &:hover {
+    //   background-color: #00ff31; // Hover effect for dropdown items
+    //   color: #000;
+    // }
+  }
+
+  .dropdown-menu-text{
+    display: flex; // 使用 Flexbox 布局
+    justify-content: space-between; // 將子元素分散對齊
+    align-items: center; // 垂直居中對齊
+    font-size: 14pt;
+    padding: 14px 24px; // Padding for the dropdown items
+
+    .menu-bottom {
+      margin-right: 10px; // 自動推到右側
+    }
+    .menu-right{
+      margin-right: 10px; // 自動推到右側
+    }
+  }
+  .dropdown-menu-hr{
+    border-bottom: 1pt solid #00ff31;
+    margin: 0 15px;
+    padding: 0;
+  }
+  .sub-text{
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 6px 24px; // Padding for the dropdown items
+  }
+}
+
+.show {
+  display: block; // Shows the dropdown menu when the class is applied
+}
+

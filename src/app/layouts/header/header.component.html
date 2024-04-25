@@ -1,3 +1,42 @@
-<!-- <div class="header-bgc">
-  <img class="home" src="../../../assets/images/home.png" alt="home" />
-</div> -->
+<div class="header-bgc">
+  <a href="/">
+    <img class="header-icon left" src="../../../assets/images/home.png">
+  </a>
+  <img class="header-text" src="../../../assets/images/header-text.png">
+  <div class="menu-icon" id="icon1" (click)="toggleMenu()">
+    <div class="menu-icon_hamburger" [class.open]="isMenuOpen"></div>
+  </div>
+  <div class="dropdown-menu" [class.show]="isMenuOpen">
+    <div class="dropdown-menu-text">
+      <a href="/">世界觀</a>
+      <img class="menu-right" src="../../../assets/images/menu-right.png">
+    </div>
+    <div class="dropdown-menu-text dropdown-menu-hr">
+    </div>
+    <div class="dropdown-menu-text">
+      <a href="/characters">角色介紹</a>
+      <img class="menu-bottom" src="../../../assets/images/menu-bottom.png">
+    </div>
+    <div class="dropdown-menu-text sub-text">
+      <a href="/characters">四足露西</a>
+    </div>
+    <div class="dropdown-menu-text sub-text">
+      <a href="/characters">多工瑞克</a>
+    </div>
+    <div class="dropdown-menu-text sub-text">
+      <a href="/characters">馬蹄芬妮</a>
+    </div>
+    <div class="dropdown-menu-text sub-text">
+      <a href="/characters">凝膠夫人</a>
+    </div>
+    <div class="dropdown-menu-text sub-text">
+      <a href="/characters">極窄露娜</a>
+    </div>
+    <div class="dropdown-menu-text sub-text">
+      <a href="/characters">怪手克斯</a>
+    </div>
+    <div class="dropdown-menu-text sub-text">
+      <a href="/characters">速溜捷米</a>
+    </div>
+  </div>
+</div>

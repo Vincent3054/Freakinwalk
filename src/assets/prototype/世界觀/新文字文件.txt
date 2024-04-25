@@ -1,0 +1,7 @@
+<nav class="breadcrumb" [class.expanded]="breadcrumbsExpanded" aria-label="breadcrumb">
+      <ol>
+        <li *ngFor="let crumb of breadcrumbs; let last = last " >
+          <!-- 面包屑連結 -->
+        </li>
+      </ol>
+</nav>

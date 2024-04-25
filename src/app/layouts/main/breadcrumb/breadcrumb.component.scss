@@ -1,0 +1,45 @@
+// .breadcrumb {
+//   background-color: transparent;
+//   padding: 0;
+//   margin-bottom: 0;
+//   list-style: none;
+
+//   .breadcrumb-item {
+//     display: inline-block;
+
+//     &:not(:last-child)::after {
+//       content: '>';
+//       padding: 0 0.5rem;
+//       color: #00ff31;
+//     }
+
+//     a {
+//       color: #00ff31;
+//       text-decoration: none;
+
+//       &:hover {
+//         text-decoration: underline;
+//       }
+//     }
+
+//     &.active {
+//       color: #00ff31;
+//       pointer-events: none;
+//     }
+//   }
+// }
+
+.breadcrumb-container {
+  .menu-icon {
+    // 三條橫線的圖標樣式
+    cursor: pointer;
+  }
+
+  .breadcrumb {
+    display: none;
+    &.expanded {
+      display: block;
+    }
+    // 樣式代碼
+  }
+}

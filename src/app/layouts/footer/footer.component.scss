@@ -1,142 +1,7 @@
-// // .footer-bgc{
-// //   /* 設置背景圖片 */
-// //   background-image: url('../../../assets/images/footer.png');
-
-// //   /* 背景圖始終置中 */
-// //   background-position: center center;
-
-// //   /* 確保背景圖不會重複 */
-// //   background-repeat: no-repeat;
-
-// //   /* 其他風格設定 */
-// //   margin: 0;
-// //   padding: 0;
-
-// //   /* 圖片長寬 */
-// //   width: 1080px;
-// //   height: 59px;
-// //  }
-
-// .footer-bgc {
-//   /* 設置背景圖片 */
-//   background-image: url('../../../assets/images/footer.png');
-
-//   /* 背景圖始終置中 */
-//   background-position: center center;
-
-//   /* 確保背景圖不會重複 */
-//   background-repeat: no-repeat;
-
-//   /* 背景圖覆蓋整個容器 */
-//   background-size: cover;
-
-//   /* 其他風格設定 */
-//   margin: 0;
-//   padding: 0;
-
-//   /* 設置固定高度 */
-//   height: 59px; // 保持高度不變
-
-//   /* 自動調整寬度以適應不同的屏幕寬度 */
-//   width: 1080px;
-// }
-
-// // 響應式設計：增加媒體查詢以處理不同尺寸的裝置
-// @media (max-width: 1080px) {
-//   .footer-bgc {
-//     background-size: contain; // 確保背景圖可以完整顯示，不裁剪
-//   }
-// }
-
-// @media (max-width: 768px) {
-//   .footer-bgc {
-//     height: 40px; // 在較小裝置上適當減少高度
-//   }
-// }
-
-// @media (max-width: 480px) {
-//   .footer-bgc {
-//     height: 30px; // 在手機上進一步減少高度
-//   }
-// // }
-// .footer-bgc {
-//   position: relative;
-//   width: 100%; // 確保 footer 佔滿其父容器的寬度
-//   height: 59px; // 固定高度，確保背景圖有足夠的顯示空間
-//   background-image: url('../../../assets/images/footer.png'); // 確保使用正確的路徑
-//   background-position: center center; // 背景圖始終置中
-//   background-repeat: no-repeat; // 確保背景圖不會重複
-//   background-size: cover; // 覆蓋整個容器，可以調整為 contain 以確保完整顯示
-//   margin: 0;
-//   padding: 0;
-//   overflow: hidden; // 避免內容溢出
-
-//   // 確保容器在有背景圖的情況下也能正常顯示
-//   &:after {
-//     content: "";
-//     display: block;
-//     visibility: visible;
-//   }
-// }
-
-// // 添加媒體查詢以適應不同裝置
-// @media (max-width: 768px) {
-//   .footer-bgc {
-//     height: 40px;
-//   }
-// }
-
-// @media (max-width: 480px) {
-//   .footer-bgc {
-//     height: 30px;
-//   }
-// }
-
-// .footer-bgc {
-//   position: relative;
-//   width: 100%;
-//   height: 59px; // 或其他足夠展示背景圖的高度
-//   background-image: url('../../../assets/images/footer.png');
-//   background-position: center center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   margin: 0;
-//   padding: 0;
-//   background-color: red; // 臨時背景顏色來檢測顯示
-// }
-
-// .footer-bgc {
-//   position: relative;
-//   width: 100%; // 确保 div 占满其父容器的宽度
-//   height: 59px; // 固定高度，确保背景图有足够的显示空间
-//   margin: 0;
-//   padding: 0;
-//   overflow: hidden; // 防止图片溢出
-
-//   img {
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover; // 保持图片覆盖整个容器，可能会裁剪边缘
-//     display: block; // 移除图片下方的空隙
-//   }
-// }
-
-// // 媒体查询适应不同设备
-// @media (max-width: 768px) {
-//   .footer-bgc {
-//     height: 40px; // 在较小设备上适当减少高度
-//   }
-// }
-
-// @media (max-width: 480px) {
-//   .footer-bgc {
-//     height: 30px; // 在手机上进一步减少高度
-//   }
-// }
-
 .footer-bgc {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
+  justify-content: space-between; /* 調整爲 space-between 以將子元素推到兩邊和中間 */
   align-items: center;
   width: 100%; /* 使用百分比而非固定像素值 */
   height: 60px;
@@ -146,39 +11,42 @@
 }
 
 .footer-text {
-  color: white;
-  font-size: 1.5em; /* 根据需要调整 */
-  margin: 0 10px; /* 与星星图片保持一些距离 */
+  flex: 0 1 auto; /* 能夠縮放且基於內容寬度，但不會填滿整個容器 */
+  width: 263px;
 }
 
-.star {
-  width: 50px; /* 根据需要调整 */
+.footer-icon {
+  width: 40px; /* 根据需要调整 */
   height: auto; /* 保持图片比例 */
+  .left{
+    margin-left: 5px; /* 靠左對齊並留出一些間距 */
+  }
+  .righ{
+    margin-right: 5px; /* 靠右對齊並留出一些間距 */
+  }
 }
 
 /* 响应式设计 */
 @media (max-width: 768px) {
+  .footer-text {
+    width: 197px;
+  }
+  .footer-icon {
+    width: 30px; /* 在小屏幕上减小星星图片大小 */
+  }
   .footer-bgc {
     height: 40px;
-  }
-  .footer-text {
-    font-size: 1em; /* 在小屏幕上减小字体大小 */
-  }
-
-  .star {
-    width: 30px; /* 在小屏幕上减小星星图片大小 */
   }
 }
 
 @media (max-width: 480px) {
-  .footer-bgc {
-    height: 30px;
-  }
   .footer-text {
-    font-size: 0.75em; /* 在更小屏幕上进一步减小字体大小 */
+    width: 131px; /* 在更小屏幕上进一步减小星星图片大小 */
   }
-
-  .star {
-    width: 20px; /* 在更小屏幕上进一步减小星星图片大小 */
+  .footer-icon {
+    width: 20px; /* 在小屏幕上减小星星图片大小 */
+  }
+  .footer-bgc {
+    height: 35px;
   }
 }
