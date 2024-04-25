@@ -31,9 +31,6 @@
   .header-text {
     width: 197px;
   }
-  .header-icon {
-    width: 30px; /* 在小屏幕上减小星星图片大小 */
-  }
   .header-bgc {
     height: 40px;
   }
@@ -41,10 +38,7 @@
 
 @media (max-width: 480px) {
   .header-text {
-    width: 131px; /* 在更小屏幕上进一步减小星星图片大小 */
-  }
-  .header-icon {
-    width: 20px; /* 在小屏幕上减小星星图片大小 */
+    width: 131px;
   }
   .header-bgc {
     height: 35px;
@@ -53,7 +47,6 @@
 
 
 // menu style
-
 $menu-color: #00ff31;
 $menu-color-close: #00ff31;
 $fatness: 3px;
@@ -70,7 +63,6 @@ $fatness: 3px;
   align-items: center;
   padding: 10px;
   cursor: pointer;
-  margin-left: 5px;
   z-index: 1;
 
   &_hamburger{
