@@ -2,5 +2,6 @@ export const STATIC_ROUTES = {
   /**首頁 */
   HOME: '',
   Order: 'order',
-  Characters: 'characters/:id'
+  Characters: 'characters/:id',
+  Worldview: 'worldview'
 }

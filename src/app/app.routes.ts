@@ -39,6 +39,16 @@ export const routes: Routes = [
         //   breadcrumb: BREADCRUMB.HOME,
         // },
       },
+      {
+        path: STATIC_ROUTES.Worldview,
+        loadComponent: () =>
+          import('./pages/worldview/worldview.component').then(
+            (c) => c.WorldviewComponent
+          ),
+        // data: {
+        //   breadcrumb: BREADCRUMB.HOME,
+        // },
+      }
     ]
   }
 ];
