@@ -25,6 +25,17 @@
     margin-right: 5px; /* 靠右對齊並留出一些間距 */
   }
 }
+.menu-img-icon{
+  width: 45px; /* 根据需要调整 */
+  height: auto; /* 保持图片比例 */
+  .left{
+    margin-left: 5px; /* 靠左對齊並留出一些間距 */
+  }
+  .righ{
+    margin-right: 5px; /* 靠右對齊並留出一些間距 */
+  }
+}
+
 
 /* 响应式设计 */
 @media (max-width: 768px) {
@@ -34,6 +45,12 @@
   .header-bgc {
     height: 40px;
   }
+  .header-icon{
+    width: 30px; /* 根据需要调整 */
+  }
+  .menu-img-icon{
+    width: 35px; /* 根据需要调整 */
+  }
 }
 
 @media (max-width: 480px) {
@@ -42,6 +59,12 @@
   }
   .header-bgc {
     height: 35px;
+  }
+  .header-icon{
+    width: 25px; /* 根据需要调整 */
+  }
+  .menu-img-icon{
+    width: 30px; /* 根据需要调整 */
   }
 }
 
