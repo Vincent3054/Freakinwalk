@@ -1,11 +1,30 @@
+.container-visual {
+  display: flex;
+  justify-content: space-between; /* 使用 space-between 使箭頭分布在兩端 */
+  align-items: center;            /* 垂直居中 */
+  margin: 0 auto 4% auto;                 /* 水平居中 */
+  max-width: 100%;                 /* 容器最大寬度，可根據需要調整 */
+  position: relative;
+}
+
+.visual-img {
+  width: 50%;
+  display: block;  /* 確保圖片不會疊在一起 */
+}
+
+.visual-arrow-img {
+  width: 5%;       /* 設定箭頭大小 */
+  cursor: pointer; /* 添加鼠標指針變化，指示可點擊 */
+}
+
 .hr{
   color: #00ff31;
   border-bottom: 1pt solid #00ff31;
   margin: 0% 5% 0% 5%;
 }
 .content{
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 3%;
+  margin-bottom: 3%;
   padding: 0 5%;
   color: #00ff31;
   font-weight: bold;
@@ -22,7 +41,6 @@
   border: 2pt solid #00ff31;
   border-radius: 35px;
   margin: 15% auto 40px auto;
-  // margin: 15% 10% 40px 10%;
   padding: 8px 0px 8px 0px;
   width: 462px;
 }
@@ -82,6 +100,12 @@
 
 /* 响应式设计 */
 @media (max-width: 768px) {
+  .visual-img {
+    width: 70%;
+  }
+  .visual-arrow-img {
+    width: 8%;
+  }
   .container-text{
     margin-left: 10%;
     margin-right: 10%;
@@ -132,6 +156,9 @@
 }
 
 @media (max-width: 480px) {
+  .container-visual {
+    margin: 0 auto 15% auto;
+  }
   .content{
     margin-top: 10%;
     margin-bottom: 10%;
