@@ -1,3 +1,8 @@
+.hr{
+  color: #00ff31;
+  border-bottom: 1pt solid #00ff31;
+  margin: 0% 5% 0% 5%;
+}
 .content{
   margin-top: 5%;
   margin-bottom: 5%;
@@ -93,6 +98,9 @@
     margin-right: 2%;
     margin-left: 2%;
   }
+  .hr{
+    margin: 0% 3% 0% 3%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -123,5 +131,8 @@
   .member img {
     width: 85px; /* Adjust based on your preference */
     height: auto;
+  }
+  .hr{
+    margin: 0% 0% 40% 0%;
   }
 }
