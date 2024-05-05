@@ -1,4 +1,4 @@
-import { Component,OnInit  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -9,11 +9,11 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './characters.component.html',
   styleUrl: './characters.component.scss'
 })
-export class CharactersComponent implements OnInit{
+export class CharactersComponent implements OnInit {
   characterId: string | null = null;
   imageUrl: string | null = null;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -23,6 +23,6 @@ export class CharactersComponent implements OnInit{
   }
 
   updateImageUrl() {
-    this.imageUrl = `../../../assets/images/characters${this.characterId}.png`;
+    this.imageUrl = `../../../assets/images/characters${this.characterId}.gif`;
   }
 }
